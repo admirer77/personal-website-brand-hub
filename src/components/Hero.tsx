@@ -19,6 +19,9 @@ const Hero = () => {
               <span className="block bg-gradient-to-r from-accent-glow to-primary-glow bg-clip-text text-transparent">
                 Gaddam
               </span>
+              <span className="block text-2xl lg:text-3xl text-primary-foreground/80 mt-2">
+                "Admirer"
+              </span>
             </h1>
             
             <h2 className="text-xl lg:text-2xl text-primary-foreground/90 mb-4 font-medium">

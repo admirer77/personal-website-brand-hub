@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,8 @@ const Navigation = () => {
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "#contact" },
+    { label: "Education", href: "#education" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -46,9 +48,14 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="text-2xl font-bold bg-gradient-text bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            NG
+            <span className="text-2xl font-bold bg-gradient-text bg-clip-text text-transparent">
+              Nehanth
+            </span>
+            <span className="text-sm font-medium text-muted-foreground">
+              (Admirer)
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -68,21 +75,25 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTA and Theme Toggle */}
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <Button variant="hero" size="sm" className="shadow-glow">
               <Download className="h-4 w-4" />
               Resume
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-foreground hover:text-primary transition-colors"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
