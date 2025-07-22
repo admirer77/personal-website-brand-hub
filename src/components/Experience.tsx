@@ -59,7 +59,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Work <span className="bg-gradient-text bg-clip-text text-transparent">Experience</span>
           </h2>
@@ -71,14 +71,14 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm">
+            <Card key={index} className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
               <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                 {/* Left side - Icon and timeline */}
                 <div className="flex lg:flex-col items-center lg:items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow">
+                  <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow animate-bounce-in">
                     <Briefcase className="h-8 w-8 text-primary-foreground" />
                   </div>
-                  <div className="hidden lg:block w-0.5 h-24 bg-gradient-to-b from-primary to-accent opacity-30"></div>
+                  <div className="hidden lg:block w-0.5 h-24 bg-gradient-to-b from-primary to-accent opacity-30 animate-pulse"></div>
                 </div>
 
                 {/* Right side - Content */}

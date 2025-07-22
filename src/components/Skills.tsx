@@ -52,7 +52,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Skills & <span className="bg-gradient-text bg-clip-text text-transparent">Expertise</span>
           </h2>
@@ -65,9 +65,9 @@ const Skills = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 bg-gradient-card">
+            <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 bg-gradient-card hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center`}>
+                <div className={`w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center animate-float`} style={{animationDelay: `${index * 0.5}s`}}>
                   <category.icon className={`h-6 w-6 text-primary-foreground`} />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>

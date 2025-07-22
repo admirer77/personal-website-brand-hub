@@ -16,8 +16,8 @@ const Index = () => {
       <Experience />
       <Skills />
       <Projects />
-      <Contact />
       <Education />
+      <Contact />
     </div>
   );
 };

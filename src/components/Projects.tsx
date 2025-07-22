@@ -81,7 +81,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Featured <span className="bg-gradient-text bg-clip-text text-transparent">Projects</span>
           </h2>
@@ -93,10 +93,10 @@ const Projects = () => {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm">
+            <Card key={index} className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
               {/* Header */}
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow flex-shrink-0 animate-pulse-glow">
                   <project.icon className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div className="flex-1">

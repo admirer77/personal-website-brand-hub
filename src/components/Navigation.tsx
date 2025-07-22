@@ -51,10 +51,7 @@ const Navigation = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <span className="text-2xl font-bold bg-gradient-text bg-clip-text text-transparent">
-              Nehanth
-            </span>
-            <span className="text-sm font-medium text-muted-foreground">
-              (Admirer)
+              Admirer
             </span>
           </a>
 
