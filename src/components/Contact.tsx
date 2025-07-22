@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageSquare, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -174,8 +174,25 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Footer Note */}
+        {/* Collaboration Call to Action */}
         <div className="text-center mt-16">
+          <Card className="p-8 shadow-elegant bg-gradient-card max-w-2xl mx-auto animate-fade-in-up hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
+              Interested in Collaboration?
+            </h3>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              I'm always excited to work on new projects and explore innovative solutions. 
+              Let's connect and discuss how we can create something amazing together!
+            </p>
+            <Button variant="hero" size="lg" className="shadow-glow hover:scale-110 transition-transform">
+              <ExternalLink className="h-4 w-4" />
+              Get In Touch
+            </Button>
+          </Card>
+        </div>
+
+        {/* Footer Note */}
+        <div className="text-center mt-8">
           <Card className="p-6 shadow-card bg-card/30 backdrop-blur-sm max-w-2xl mx-auto">
             <p className="text-muted-foreground">
               <strong className="text-primary">Response Time:</strong> I typically respond to emails 

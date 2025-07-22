@@ -154,22 +154,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="p-8 shadow-elegant bg-gradient-card max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Interested in Collaboration?
-            </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm always excited to work on new projects and explore innovative solutions. 
-              Let's connect and discuss how we can create something amazing together!
-            </p>
-            <Button variant="hero" size="lg" className="shadow-glow">
-              <ExternalLink className="h-4 w-4" />
-              Get In Touch
-            </Button>
-          </Card>
-        </div>
       </div>
     </section>
   );

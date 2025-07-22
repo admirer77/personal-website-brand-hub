@@ -11,6 +11,8 @@ const Hero = () => {
         <div className="absolute top-10 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
         <div className="absolute bottom-20 right-20 w-16 h-16 bg-accent/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-primary-glow/30 rounded-full animate-pulse-glow"></div>
+        <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-accent/25 rounded-full animate-bounce-in" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/3 left-1/2 w-14 h-14 bg-primary/15 animate-morphing" style={{animationDelay: '1.5s'}}></div>
       </div>
       
       <div className="container mx-auto px-6 z-10">
@@ -19,10 +21,10 @@ const Hero = () => {
           <div className="text-center lg:text-left animate-slide-in-left">
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               <span className="animate-bounce-in block">Nehanth</span>
-              <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent animate-stagger-1">
+              <span className="block text-foreground animate-stagger-1">
                 Gaddam
               </span>
-              <span className="block text-2xl lg:text-3xl text-muted-foreground mt-2 animate-stagger-2">
+              <span className="block text-2xl lg:text-3xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mt-2 animate-stagger-2">
                 "Admirer"
               </span>
             </h1>
@@ -41,11 +43,11 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8 animate-stagger-6">
-              <Button variant="hero" size="lg" className="shadow-glow hover:scale-105 transition-transform">
+              <Button variant="hero" size="lg" className="shadow-glow hover:scale-105 transition-transform hover:animate-rubber-band">
                 <Download className="h-4 w-4" />
                 Download CV
               </Button>
-              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform hover:animate-tada">
                 <ExternalLink className="h-4 w-4" />
                 View Projects
               </Button>
