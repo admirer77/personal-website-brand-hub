@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Github, Linkedin, Download, ExternalLink } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
+import HeroParticles from "./HeroParticles";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
+      <HeroParticles />
       <FloatingLogos section="hero" />
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-20">
