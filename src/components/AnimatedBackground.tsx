@@ -19,15 +19,15 @@ const AnimatedBackground = () => {
       const newParticles: Particle[] = [];
       const colors = ['hsl(24, 100%, 50%)', 'hsl(20, 100%, 55%)', 'hsl(30, 100%, 60%)'];
       
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 30; i++) {
         newParticles.push({
           id: i,
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
-          size: Math.random() * 4 + 1,
-          speedX: (Math.random() - 0.5) * 0.2,
-          speedY: (Math.random() - 0.5) * 0.2,
-          opacity: Math.random() * 0.5 + 0.1,
+          size: Math.random() * 3 + 1,
+          speedX: (Math.random() - 0.5) * 0.1,
+          speedY: (Math.random() - 0.5) * 0.1,
+          opacity: Math.random() * 0.4 + 0.2,
           color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
@@ -41,11 +41,11 @@ const AnimatedBackground = () => {
         let newX = particle.x + particle.speedX;
         let newY = particle.y + particle.speedY;
         
-        // Smooth wrapping with fadeout near edges
-        if (newX > window.innerWidth + 10) newX = -10;
-        if (newX < -10) newX = window.innerWidth + 10;
-        if (newY > window.innerHeight + 10) newY = -10;
-        if (newY < -10) newY = window.innerHeight + 10;
+        // Smooth continuous movement with gentle wrapping
+        if (newX > window.innerWidth + 20) newX = -20;
+        if (newX < -20) newX = window.innerWidth + 20;
+        if (newY > window.innerHeight + 20) newY = -20;
+        if (newY < -20) newY = window.innerHeight + 20;
         
         return {
           ...particle,
@@ -55,7 +55,7 @@ const AnimatedBackground = () => {
       }));
     };
 
-    const interval = setInterval(animateParticles, 30);
+    const interval = setInterval(animateParticles, 16); // 60fps for smooth movement
     return () => clearInterval(interval);
   }, []);
 
@@ -64,7 +64,7 @@ const AnimatedBackground = () => {
       {particles.map(particle => (
         <div
           key={particle.id}
-          className="absolute animate-particle-float"
+          className="absolute animate-pulse"
           style={{
             left: particle.x,
             top: particle.y,
@@ -73,8 +73,9 @@ const AnimatedBackground = () => {
             backgroundColor: particle.color,
             opacity: particle.opacity,
             borderRadius: '50%',
-            animationDelay: `${particle.id * 0.1}s`,
-            animationDuration: `${6 + Math.random() * 4}s`
+            boxShadow: `0 0 ${particle.size * 2}px ${particle.color}`,
+            transition: 'all 0.1s linear',
+            animationDuration: `${4 + Math.random() * 2}s`
           }}
         />
       ))}

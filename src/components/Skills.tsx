@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Database, Cloud, Cpu, Lightbulb, Users } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const Skills = () => {
   const skillCategories = [
@@ -50,7 +51,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-background">
+    <section id="skills" className="py-20 bg-background relative">
+      <FloatingLogos section="skills" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">
