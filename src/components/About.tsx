@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Target, User, Code2 } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const About = () => {
   const personalInfo = [
@@ -31,7 +32,8 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-background relative">
+      <FloatingLogos section="about" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">

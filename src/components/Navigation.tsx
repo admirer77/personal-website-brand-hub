@@ -50,7 +50,7 @@ const Navigation = () => {
             }}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <span className="text-2xl font-bold bg-gradient-text bg-clip-text text-transparent">
+            <span className="text-2xl font-bold text-orange-400 dark:text-orange-400">
               Admirer
             </span>
           </a>
@@ -65,7 +65,7 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-foreground hover:text-orange-400 transition-colors duration-200 font-medium relative group"
               >
                 {item.label}
               </a>
@@ -106,7 +106,7 @@ const Navigation = () => {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }}
-                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                    className="text-foreground hover:text-orange-400 transition-colors duration-200 font-medium py-2"
                   >
                     {item.label}
                   </a>

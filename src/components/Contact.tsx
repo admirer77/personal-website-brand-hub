@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageSquare, ExternalLink } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const Contact = () => {
   const contactInfo = [
@@ -45,7 +46,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-background relative">
+      <FloatingLogos section="contact" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">

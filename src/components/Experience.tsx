@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const Experience = () => {
   const experiences = [
@@ -57,7 +58,8 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="py-20 bg-muted/30 relative">
+      <FloatingLogos section="experience" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">

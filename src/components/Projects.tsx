@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Calendar, Shield, Smartphone, BarChart3 } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const Projects = () => {
   const projects = [
@@ -79,7 +80,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 bg-muted/30 relative">
+      <FloatingLogos section="projects" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">

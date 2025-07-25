@@ -25,8 +25,8 @@ const AnimatedBackground = () => {
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
           size: Math.random() * 4 + 1,
-          speedX: (Math.random() - 0.5) * 0.5,
-          speedY: (Math.random() - 0.5) * 0.5,
+          speedX: (Math.random() - 0.5) * 0.2,
+          speedY: (Math.random() - 0.5) * 0.2,
           opacity: Math.random() * 0.5 + 0.1,
           color: colors[Math.floor(Math.random() * colors.length)]
         });
@@ -41,11 +41,11 @@ const AnimatedBackground = () => {
         let newX = particle.x + particle.speedX;
         let newY = particle.y + particle.speedY;
         
-        // Wrap around screen edges
-        if (newX > window.innerWidth) newX = 0;
-        if (newX < 0) newX = window.innerWidth;
-        if (newY > window.innerHeight) newY = 0;
-        if (newY < 0) newY = window.innerHeight;
+        // Smooth wrapping with fadeout near edges
+        if (newX > window.innerWidth + 10) newX = -10;
+        if (newX < -10) newX = window.innerWidth + 10;
+        if (newY > window.innerHeight + 10) newY = -10;
+        if (newY < -10) newY = window.innerHeight + 10;
         
         return {
           ...particle,
@@ -55,7 +55,7 @@ const AnimatedBackground = () => {
       }));
     };
 
-    const interval = setInterval(animateParticles, 50);
+    const interval = setInterval(animateParticles, 30);
     return () => clearInterval(interval);
   }, []);
 

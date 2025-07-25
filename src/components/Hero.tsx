@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Github, Linkedin, Download, ExternalLink } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
+      <FloatingLogos section="hero" />
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/10 to-accent-glow/10"></div>
@@ -24,7 +26,7 @@ const Hero = () => {
               <span className="block text-foreground animate-stagger-1">
                 Gaddam
               </span>
-              <span className="block text-2xl lg:text-3xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mt-2 animate-stagger-2">
+              <span className="block text-2xl lg:text-3xl text-orange-400 dark:text-orange-400 mt-2 animate-stagger-2">
                 "Admirer"
               </span>
             </h1>
