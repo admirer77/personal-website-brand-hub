@@ -69,29 +69,25 @@ const HeroParticles = () => {
   // Calculate color based on scroll position and theme
   const getParticleColor = () => {
     const isDarkMode = document.documentElement.classList.contains('dark');
-    const scrollProgress = Math.min(scrollY / 800, 1); // Longer scroll distance for transition
+    const scrollProgress = Math.min(scrollY / 800, 1);
     
     if (isDarkMode) {
-      // Dark mode: bright particles on dark background
-      if (scrollProgress < 0.3) {
-        // Orange hero section - keep orange particles
-        return `hsl(24, 100%, 70%)`;
+      // Dark mode - bright particles on dark backgrounds
+      if (scrollProgress < 0.2) {
+        // Orange hero section - bright orange particles
+        return `hsl(24, 100%, 65%)`;
       } else {
-        // Transition to other sections - keep visible colors
-        const progress = (scrollProgress - 0.3) / 0.7;
-        const hue = 24 + (196 * progress); // Orange to blue
-        return `hsl(${hue}, 80%, 60%)`;
+        // Other dark sections - keep bright colors
+        return `hsl(45, 90%, 60%)`;
       }
     } else {
-      // Light mode: dark particles on light background  
-      if (scrollProgress < 0.3) {
-        // Orange hero section - use dark particles for contrast
-        return `hsl(240, 70%, 25%)`;
+      // Light mode - dark particles for contrast
+      if (scrollProgress < 0.2) {
+        // Orange hero section - dark particles for visibility
+        return `hsl(220, 60%, 25%)`;
       } else {
-        // Other sections - use dark colors that contrast with light backgrounds
-        const progress = (scrollProgress - 0.3) / 0.7;
-        const hue = 240 - (60 * progress); // Blue to purple
-        return `hsl(${hue}, 60%, 30%)`;
+        // Light sections - dark particles
+        return `hsl(220, 50%, 30%)`;
       }
     }
   };
