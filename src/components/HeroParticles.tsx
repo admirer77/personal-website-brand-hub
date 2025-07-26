@@ -74,20 +74,20 @@ const HeroParticles = () => {
     if (isDarkMode) {
       // Dark mode - bright particles on dark backgrounds
       if (scrollProgress < 0.2) {
-        // Orange hero section - bright orange particles
-        return `hsl(24, 100%, 65%)`;
+        // Orange hero section - brown particles for visibility
+        return `hsl(25, 60%, 45%)`;
       } else {
-        // Other dark sections - keep bright colors
-        return `hsl(45, 90%, 60%)`;
+        // Other dark sections - brown particles
+        return `hsl(30, 55%, 50%)`;
       }
     } else {
-      // Light mode - dark particles for contrast
+      // Light mode - brown particles for contrast
       if (scrollProgress < 0.2) {
-        // Orange hero section - dark particles for visibility
-        return `hsl(220, 60%, 25%)`;
+        // Orange hero section - dark brown particles
+        return `hsl(25, 70%, 25%)`;
       } else {
-        // Light sections - dark particles
-        return `hsl(220, 50%, 30%)`;
+        // Light sections - brown particles
+        return `hsl(30, 60%, 30%)`;
       }
     }
   };
