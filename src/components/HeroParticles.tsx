@@ -18,7 +18,7 @@ const HeroParticles = () => {
     const createParticles = () => {
       const newParticles: Particle[] = [];
       
-      for (let i = 0; i < 25; i++) {
+      for (let i = 0; i < 50; i++) {
         newParticles.push({
           id: i,
           x: Math.random() * window.innerWidth,
@@ -95,7 +95,7 @@ const HeroParticles = () => {
   const particleColor = getParticleColor();
 
   return (
-    <div className="absolute inset-0 pointer-events-none z-5 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-5 overflow-hidden">
       {particles.map(particle => (
         <div
           key={particle.id}

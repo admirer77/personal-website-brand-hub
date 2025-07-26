@@ -29,7 +29,11 @@ const FloatingLogos = ({ section }: FloatingLogosProps) => {
           { Icon: Code, delay: 0, duration: 4, position: 'top-10 left-10' },
           { Icon: Database, delay: 1, duration: 5, position: 'top-20 right-20' },
           { Icon: Cloud, delay: 2, duration: 6, position: 'bottom-32 left-1/4' },
-          { Icon: Lightbulb, delay: 3, duration: 4.5, position: 'top-1/3 right-1/4' }
+          { Icon: Lightbulb, delay: 3, duration: 4.5, position: 'top-1/3 right-1/4' },
+          { Icon: Cpu, delay: 1.5, duration: 5.2, position: 'bottom-20 right-1/3' },
+          { Icon: Github, delay: 2.5, duration: 4.8, position: 'top-1/2 left-16' },
+          { Icon: Users, delay: 0.8, duration: 5.5, position: 'bottom-40 left-40' },
+          { Icon: Briefcase, delay: 3.2, duration: 4.2, position: 'top-40 right-40' }
         ];
       case 'skills':
         return [
