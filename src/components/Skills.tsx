@@ -51,21 +51,21 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-background relative">
+    <section id="skills" className="py-16 sm:py-20 bg-background relative">
       <FloatingLogos section="skills" />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Skills & <span className="bg-gradient-text bg-clip-text text-transparent">Expertise</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             A comprehensive toolkit spanning data science, machine learning, cloud technologies, 
             and software development.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 bg-gradient-card hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="flex items-center gap-3 mb-6">
@@ -96,7 +96,7 @@ const Skills = () => {
             Relevant <span className="bg-gradient-text bg-clip-text text-transparent">Courses</span>
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {certifications.map((cert, index) => (
               <Card key={index} className="p-4 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/50 backdrop-blur-sm">
                 <div className="flex items-center justify-center h-16">

@@ -58,23 +58,23 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-muted/30 relative">
+    <section id="experience" className="py-16 sm:py-20 bg-muted/30 relative">
       <FloatingLogos section="experience" />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Work <span className="bg-gradient-text bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Hands-on experience in data science, machine learning, and cloud technologies 
             through various internships and projects.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-              <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+            <Card key={index} className="p-4 sm:p-6 lg:p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
+              <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-6">
                 {/* Left side - Icon and timeline */}
                 <div className="flex lg:flex-col items-center lg:items-start gap-4">
                   <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow animate-bounce-in">
@@ -85,20 +85,20 @@ const Experience = () => {
 
                 {/* Right side - Content */}
                 <div className="flex-1">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-4">
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-1">{exp.title}</h3>
-                      <p className="text-lg font-medium text-primary mb-2">{exp.company}</p>
-                      <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
+                      <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-1">{exp.title}</h3>
+                      <p className="text-base sm:text-lg font-medium text-primary mb-2">{exp.company}</p>
+                      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-4 text-muted-foreground">
                         <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
+                          <Calendar className="h-4 w-4 flex-shrink-0" />
                           <span className="text-sm">{exp.duration}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
+                          <MapPin className="h-4 w-4 flex-shrink-0" />
                           <span className="text-sm">{exp.location}</span>
                         </div>
-                        <Badge variant="outline" className="text-xs">
+                        <Badge variant="outline" className="text-xs w-fit">
                           {exp.type}
                         </Badge>
                       </div>

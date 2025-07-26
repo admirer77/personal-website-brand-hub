@@ -35,20 +35,20 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-muted/30 relative">
+    <section id="education" className="py-16 sm:py-20 bg-muted/30 relative">
       <FloatingLogos section="education" />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Education & <span className="bg-gradient-text bg-clip-text text-transparent">Achievements</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Academic journey and notable achievements that shaped my expertise in 
             data science and technology.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Education Section */}
           <div>
             <div className="flex items-center gap-3 mb-8">

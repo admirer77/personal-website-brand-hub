@@ -32,21 +32,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background relative">
+    <section id="about" className="py-16 sm:py-20 bg-background relative">
       <FloatingLogos section="about" />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             About <span className="bg-gradient-text bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Passionate Data Science student with expertise in machine learning, deep learning, 
             and cloud technologies. Currently pursuing B.Tech in Computer Science & Engineering 
             with specialization in Data Science.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Personal Information */}
           <div className="animate-slide-in-left">
             <div className="flex items-center gap-3 mb-8">
@@ -75,7 +75,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Interests</h3>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {interests.map((interest, index) => (
                 <Card key={index} className="p-4 shadow-card hover:shadow-elegant transition-all duration-300 text-center hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
                   <p className="text-sm font-medium text-foreground">{interest}</p>

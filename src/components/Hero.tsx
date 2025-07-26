@@ -19,60 +19,60 @@ const Hero = () => {
         <div className="absolute bottom-1/3 left-1/2 w-14 h-14 bg-primary/15 animate-morphing" style={{animationDelay: '1.5s'}}></div>
       </div>
       
-      <div className="container mx-auto px-6 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left animate-slide-in-left">
-            <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <div className="text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               <span className="animate-bounce-in block">Nehanth</span>
               <span className="block text-foreground animate-stagger-1">
                 Gaddam
               </span>
-              <span className="block text-2xl lg:text-3xl text-orange-400 dark:text-orange-400 mt-2 animate-stagger-2">
+              <span className="block text-xl sm:text-2xl lg:text-3xl text-orange-400 dark:text-orange-400 mt-2 animate-stagger-2">
                 "Admirer"
               </span>
             </h1>
             
-            <h2 className="text-xl lg:text-2xl text-foreground mb-4 font-medium animate-stagger-3">
+            <h2 className="text-lg sm:text-xl lg:text-2xl text-foreground mb-4 font-medium animate-stagger-3">
               Computer Science & Engineering (Data Science)
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-2 animate-stagger-4">
+            <p className="text-base sm:text-lg text-muted-foreground mb-2 animate-stagger-4">
               Data Analyst | Aeronautical Engineering Enthusiast
             </p>
             
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-8 animate-stagger-5">
-              <MapPin className="h-4 w-4" />
-              <span>Hyderabad, India</span>
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-6 sm:mb-8 animate-stagger-5">
+              <MapPin className="h-4 w-4 flex-shrink-0" />
+              <span className="text-sm sm:text-base">Hyderabad, India</span>
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8 animate-stagger-6">
-              <Button variant="hero" size="lg" className="shadow-glow hover:scale-105 transition-transform hover:animate-rubber-band">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 animate-stagger-6">
+              <Button variant="hero" size="lg" className="shadow-glow hover:scale-105 transition-transform hover:animate-rubber-band w-full sm:w-auto">
                 <Download className="h-4 w-4" />
                 Download CV
               </Button>
-              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform hover:animate-tada">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform hover:animate-tada w-full sm:w-auto">
                 <ExternalLink className="h-4 w-4" />
                 View Projects
               </Button>
             </div>
 
             {/* Contact info quick access */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-              <a href="tel:+917731020885" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform">
-                <Phone className="h-4 w-4" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+              <a href="tel:+917731020885" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform justify-center lg:justify-start">
+                <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm">+91 77310 20885</span>
               </a>
-              <a href="mailto:nehanthalminer@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform">
-                <Mail className="h-4 w-4" />
+              <a href="mailto:nehanthalminer@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform justify-center lg:justify-start">
+                <Mail className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm">nehanthalminer@gmail.com</span>
               </a>
             </div>
           </div>
 
           {/* Right side - Profile card */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right">
-            <Card className="p-8 max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
+          <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2">
+            <Card className="p-6 sm:p-8 max-w-sm sm:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
                   <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-4xl font-bold text-primary animate-pulse-glow">
