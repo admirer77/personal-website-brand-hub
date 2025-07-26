@@ -69,29 +69,29 @@ const HeroParticles = () => {
   // Calculate color based on scroll position and theme
   const getParticleColor = () => {
     const isDarkMode = document.documentElement.classList.contains('dark');
-    const scrollProgress = Math.min(scrollY / 500, 1); // 500px scroll to fully transition
+    const scrollProgress = Math.min(scrollY / 800, 1); // Longer scroll distance for transition
     
     if (isDarkMode) {
-      // Dark mode: orange/warm colors that stand out against dark background
-      if (scrollProgress < 0.5) {
-        const progress = scrollProgress * 2;
-        const hue = 24 + (36 * progress); // 24 (orange) to 60 (yellow)
-        return `hsl(${hue}, 90%, ${60 + (progress * 10)}%)`;
+      // Dark mode: bright particles on dark background
+      if (scrollProgress < 0.3) {
+        // Orange hero section - keep orange particles
+        return `hsl(24, 100%, 70%)`;
       } else {
-        const progress = (scrollProgress - 0.5) * 2;
-        const hue = 60 + (160 * progress); // 60 (yellow) to 220 (blue)
-        return `hsl(${hue}, ${80 - (progress * 20)}%, ${50 + (progress * 10)}%)`;
+        // Transition to other sections - keep visible colors
+        const progress = (scrollProgress - 0.3) / 0.7;
+        const hue = 24 + (196 * progress); // Orange to blue
+        return `hsl(${hue}, 80%, 60%)`;
       }
     } else {
-      // Light mode: darker colors that stand out against orange background
-      if (scrollProgress < 0.5) {
-        const progress = scrollProgress * 2;
-        const hue = 240 + (60 * progress); // 240 (blue) to 300 (purple)
-        return `hsl(${hue}, 70%, ${30 - (progress * 10)}%)`;
+      // Light mode: dark particles on light background  
+      if (scrollProgress < 0.3) {
+        // Orange hero section - use dark particles for contrast
+        return `hsl(240, 70%, 25%)`;
       } else {
-        const progress = (scrollProgress - 0.5) * 2;
-        const hue = 300 + (60 * progress); // 300 (purple) to 360 (red)
-        return `hsl(${hue}, ${60 + (progress * 20)}%, ${25 - (progress * 5)}%)`;
+        // Other sections - use dark colors that contrast with light backgrounds
+        const progress = (scrollProgress - 0.3) / 0.7;
+        const hue = 240 - (60 * progress); // Blue to purple
+        return `hsl(${hue}, 60%, 30%)`;
       }
     }
   };
