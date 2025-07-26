@@ -95,7 +95,7 @@ const HeroParticles = () => {
   const particleColor = getParticleColor();
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-5 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
       {particles.map(particle => (
         <div
           key={particle.id}
@@ -108,7 +108,7 @@ const HeroParticles = () => {
             backgroundColor: particleColor,
             opacity: particle.opacity,
             borderRadius: '50%',
-            boxShadow: `0 0 ${particle.size * 3}px ${particleColor}`,
+            boxShadow: `0 0 ${particle.size * 6}px ${particleColor}, 0 0 ${particle.size * 12}px ${particleColor}40`,
             transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
             animationDuration: `${3 + Math.random() * 2}s`
           }}
