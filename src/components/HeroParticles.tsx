@@ -66,20 +66,33 @@ const HeroParticles = () => {
     };
   }, []);
 
-  // Calculate color based on scroll position
+  // Calculate color based on scroll position and theme
   const getParticleColor = () => {
+    const isDarkMode = document.documentElement.classList.contains('dark');
     const scrollProgress = Math.min(scrollY / 500, 1); // 500px scroll to fully transition
     
-    if (scrollProgress < 0.5) {
-      // Orange to Yellow transition
-      const progress = scrollProgress * 2;
-      const hue = 24 + (36 * progress); // 24 (orange) to 60 (yellow)
-      return `hsl(${hue}, 100%, ${50 + (progress * 10)}%)`;
+    if (isDarkMode) {
+      // Dark mode: orange/warm colors that stand out against dark background
+      if (scrollProgress < 0.5) {
+        const progress = scrollProgress * 2;
+        const hue = 24 + (36 * progress); // 24 (orange) to 60 (yellow)
+        return `hsl(${hue}, 90%, ${60 + (progress * 10)}%)`;
+      } else {
+        const progress = (scrollProgress - 0.5) * 2;
+        const hue = 60 + (160 * progress); // 60 (yellow) to 220 (blue)
+        return `hsl(${hue}, ${80 - (progress * 20)}%, ${50 + (progress * 10)}%)`;
+      }
     } else {
-      // Yellow to Blue transition
-      const progress = (scrollProgress - 0.5) * 2;
-      const hue = 60 + (160 * progress); // 60 (yellow) to 220 (blue)
-      return `hsl(${hue}, ${100 - (progress * 30)}%, ${60 - (progress * 10)}%)`;
+      // Light mode: darker colors that stand out against orange background
+      if (scrollProgress < 0.5) {
+        const progress = scrollProgress * 2;
+        const hue = 240 + (60 * progress); // 240 (blue) to 300 (purple)
+        return `hsl(${hue}, 70%, ${30 - (progress * 10)}%)`;
+      } else {
+        const progress = (scrollProgress - 0.5) * 2;
+        const hue = 300 + (60 * progress); // 300 (purple) to 360 (red)
+        return `hsl(${hue}, ${60 + (progress * 20)}%, ${25 - (progress * 5)}%)`;
+      }
     }
   };
 
