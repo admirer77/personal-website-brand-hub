@@ -56,7 +56,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -73,7 +73,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA and Theme Toggle */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
             <Button variant="hero" size="sm" className="shadow-glow">
               <Download className="h-4 w-4" />
@@ -81,8 +81,8 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button and Theme Toggle */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile & Tablet Menu Button and Theme Toggle */}
+          <div className="lg:hidden flex items-center gap-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -93,9 +93,9 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile & Tablet Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-elegant">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-elegant">
             <div className="container mx-auto px-6 py-4">
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => (

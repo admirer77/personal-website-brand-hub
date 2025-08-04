@@ -19,25 +19,25 @@ const Hero = () => {
         <div className="absolute bottom-1/3 left-1/2 w-14 h-14 bg-primary/15 animate-morphing" style={{animationDelay: '1.5s'}}></div>
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 z-10 pt-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               <span className="animate-bounce-in block">Nehanth</span>
               <span className="block text-foreground animate-stagger-1">
                 Gaddam
               </span>
-              <span className="block text-xl sm:text-2xl lg:text-3xl text-orange-400 dark:text-orange-400 mt-2 animate-stagger-2">
+              <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl text-orange-400 dark:text-orange-400 mt-2 animate-stagger-2">
                 "Admirer"
               </span>
             </h1>
             
-            <h2 className="text-lg sm:text-xl lg:text-2xl text-foreground mb-4 font-medium animate-stagger-3">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-4 font-medium animate-stagger-3">
               Computer Science & Engineering (Data Science)
             </h2>
             
-            <p className="text-base sm:text-lg text-muted-foreground mb-2 animate-stagger-4">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-2 animate-stagger-4">
               Data Analyst | Aeronautical Engineering Enthusiast
             </p>
             
@@ -47,11 +47,11 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 animate-stagger-6">
-              <Button variant="hero" size="lg" className="shadow-glow hover:scale-105 transition-transform hover:animate-rubber-band w-full sm:w-auto">
+              <Button variant="hero" size="default" className="shadow-glow hover:scale-105 transition-transform hover:animate-rubber-band w-full sm:w-auto text-sm">
                 <Download className="h-4 w-4" />
                 Download CV
               </Button>
-              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform hover:animate-tada w-full sm:w-auto">
+              <Button variant="outline" size="default" className="hover:scale-105 transition-transform hover:animate-tada w-full sm:w-auto text-sm">
                 <ExternalLink className="h-4 w-4" />
                 View Projects
               </Button>
@@ -71,39 +71,39 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile card */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2">
-            <Card className="p-6 sm:p-8 max-w-sm sm:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
+          <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2 mt-8 lg:mt-0">
+            <Card className="p-4 sm:p-6 lg:p-8 max-w-xs sm:max-w-sm lg:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-4xl font-bold text-primary animate-pulse-glow">
+                <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
+                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold text-primary animate-pulse-glow">
                     A
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-card-foreground mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-card-foreground mb-4">
                   Connect with me
                 </h3>
                 
-                <div className="flex justify-center gap-4 mb-6">
+                <div className="flex justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <a 
                     href="https://linkedin.com/in/nehanth77" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-elegant"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-elegant"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                   <a 
                     href="https://github.com/adsirce77" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-elegant"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-elegant"
                   >
-                    <Github className="h-5 w-5" />
+                    <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                 </div>
 
-                <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
                   <div className="flex items-center justify-between">
                     <span>Current CGPA:</span>
                     <span className="font-semibold text-primary">9.26</span>

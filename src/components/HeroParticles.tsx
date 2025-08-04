@@ -68,27 +68,14 @@ const HeroParticles = () => {
 
   // Calculate color based on scroll position and theme
   const getParticleColor = () => {
-    const isDarkMode = document.documentElement.classList.contains('dark');
     const scrollProgress = Math.min(scrollY / 800, 1);
     
-    if (isDarkMode) {
-      // Dark mode - bright particles on dark backgrounds
-      if (scrollProgress < 0.2) {
-        // Orange hero section - brown particles for visibility
-        return `hsl(25, 60%, 45%)`;
-      } else {
-        // Other dark sections - brown particles
-        return `hsl(30, 55%, 50%)`;
-      }
+    if (scrollProgress < 0.2) {
+      // Orange hero section - darker particles with glow, same in both modes
+      return `hsl(30, 70%, 35%)`;
     } else {
-      // Light mode - brown particles for contrast
-      if (scrollProgress < 0.2) {
-        // Orange hero section - dark brown particles
-        return `hsl(25, 70%, 25%)`;
-      } else {
-        // Light sections - brown particles
-        return `hsl(30, 60%, 30%)`;
-      }
+      // Other sections - orange particles with glow, same in both modes
+      return `hsl(24, 100%, 50%)`;
     }
   };
 
@@ -108,7 +95,7 @@ const HeroParticles = () => {
             backgroundColor: particleColor,
             opacity: particle.opacity,
             borderRadius: '50%',
-            boxShadow: `0 0 ${particle.size * 6}px ${particleColor}, 0 0 ${particle.size * 12}px ${particleColor}40`,
+            boxShadow: `0 0 ${particle.size * 8}px ${particleColor}, 0 0 ${particle.size * 16}px ${particleColor}60, 0 0 ${particle.size * 24}px ${particleColor}30`,
             transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
             animationDuration: `${3 + Math.random() * 2}s`
           }}
