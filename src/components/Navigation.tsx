@@ -86,7 +86,7 @@ const Navigation = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-foreground hover:text-primary transition-colors"
+              className="p-2 text-foreground hover:text-orange-400 transition-all duration-300 hover:bg-primary/10 rounded-lg hover:scale-105"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -95,10 +95,10 @@ const Navigation = () => {
 
         {/* Mobile & Tablet Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-elegant">
-            <div className="container mx-auto px-6 py-4">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-elegant animate-fade-in">
+            <div className="container mx-auto px-6 py-6">
               <div className="flex flex-col space-y-4">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <a
                     key={item.label}
                     href={item.href}
@@ -106,13 +106,14 @@ const Navigation = () => {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }}
-                    className="text-foreground hover:text-orange-400 transition-colors duration-200 font-medium py-2"
+                    className="text-foreground hover:text-orange-400 transition-all duration-300 font-medium py-3 px-4 rounded-lg hover:bg-primary/10 hover:scale-105 transform animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item.label}
                   </a>
                 ))}
-                <div className="pt-4 border-t border-border">
-                  <Button variant="hero" size="sm" className="w-full shadow-glow">
+                <div className="pt-4 border-t border-border/50 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+                  <Button variant="hero" size="default" className="w-full shadow-glow hover:scale-105 transition-transform">
                     <Download className="h-4 w-4" />
                     Download Resume
                   </Button>

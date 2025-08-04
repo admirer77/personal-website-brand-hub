@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 z-10 pt-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
+          <div className="text-center lg:text-left animate-slide-in-left order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               <span className="animate-bounce-in block">Nehanth</span>
               <span className="block text-foreground animate-stagger-1">
@@ -71,7 +71,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile card */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2 mt-8 lg:mt-0">
+          <div className="flex justify-center lg:justify-end animate-slide-in-right order-2 mt-8 lg:mt-0">
             <Card className="p-4 sm:p-6 lg:p-8 max-w-xs sm:max-w-sm lg:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
