@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 sm:py-20 bg-background relative">
       <FloatingLogos section="contact" />
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-6 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Get In <span className="bg-gradient-text bg-clip-text text-transparent">Touch</span>
@@ -59,7 +59,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mx-4 sm:mx-0">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
           <div>
             <Card className="p-6 sm:p-8 shadow-elegant bg-gradient-card">
