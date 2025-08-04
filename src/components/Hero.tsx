@@ -71,7 +71,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile card */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right order-2 mt-8 lg:mt-0">
+          <div className="flex justify-center lg:justify-end animate-slide-in-right order-2 mt-8 lg:mt-0 mb-8 lg:mb-0">
             <Card className="p-4 sm:p-6 lg:p-8 max-w-xs sm:max-w-sm lg:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">

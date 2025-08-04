@@ -95,8 +95,8 @@ const Navigation = () => {
 
         {/* Mobile & Tablet Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-elegant animate-fade-in">
-            <div className="container mx-auto px-6 py-6">
+          <div className="lg:hidden absolute top-16 left-4 right-4 bg-background/95 backdrop-blur-md border border-border shadow-elegant animate-fade-in rounded-xl mx-2">
+            <div className="container mx-auto px-6 py-8">
               <div className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
                   <a
