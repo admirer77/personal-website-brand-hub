@@ -15,8 +15,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "nehanthalminer@gmail.com",
-      href: "mailto:nehanthalminer@gmail.com",
+      value: "nehanthadmirer@gmail.com",
+      href: "mailto:nehanthadmirer@gmail.com",
       color: "text-accent"
     },
     {
@@ -39,8 +39,8 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub", 
-      username: "adsirce77",
-      href: "https://github.com/adsirce77",
+      username: "admirer77",
+      href: "https://github.com/admirer77",
       color: "hover:text-gray-800"
     }
   ];
@@ -156,7 +156,7 @@ const Contact = () => {
                     <Button 
                       variant="hero" 
                       className="w-full shadow-glow"
-                      onClick={() => window.open('mailto:nehanthalminer@gmail.com?subject=Let\'s Collaborate!')}
+                      onClick={() => window.open('mailto:nehanthadmirer@gmail.com?subject=Let\'s Collaborate!')}
                     >
                       <Mail className="h-4 w-4" />
                       Send Email
