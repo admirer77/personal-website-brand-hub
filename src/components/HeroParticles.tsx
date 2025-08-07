@@ -74,8 +74,8 @@ const HeroParticles = () => {
       // Orange hero section - much darker particles for better visibility
       return `hsl(30, 80%, 20%)`;
     } else {
-      // Other sections - darker orange particles for better contrast
-      return `hsl(24, 90%, 25%)`;
+      // Other sections - bright orange particles for better visibility on white/dark backgrounds
+      return `hsl(24, 100%, 45%)`;
     }
   };
 
