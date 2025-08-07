@@ -63,9 +63,9 @@ const Hero = () => {
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm">+91 77310 20885</span>
               </a>
-              <a href="mailto:nehanthalminer@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform justify-center lg:justify-start">
+              <a href="mailto:nehanthadmirer@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors hover:scale-105 transform justify-center lg:justify-start">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">nehanthalminer@gmail.com</span>
+                <span className="text-sm">nehanthadmirer@gmail.com</span>
               </a>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Hero = () => {
                     <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                   <a 
-                    href="https://github.com/adsirce77" 
+                    href="https://github.com/admirer77" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-elegant"
