@@ -71,11 +71,11 @@ const HeroParticles = () => {
     const scrollProgress = Math.min(scrollY / 800, 1);
     
     if (scrollProgress < 0.2) {
-      // Orange hero section - darker particles with glow, same in both modes
-      return `hsl(30, 70%, 35%)`;
+      // Orange hero section - much darker particles for better visibility
+      return `hsl(30, 80%, 20%)`;
     } else {
-      // Other sections - orange particles with glow, same in both modes
-      return `hsl(24, 100%, 50%)`;
+      // Other sections - darker orange particles for better contrast
+      return `hsl(24, 90%, 25%)`;
     }
   };
 
