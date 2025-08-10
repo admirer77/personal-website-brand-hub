@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Calendar, Shield, Smartphone, BarChart3 } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
 
+// Import project images
+import handwrittenAssessmentImg from "@/assets/handwritten-assessment.webp";
+import ddosDetectionImg from "@/assets/ddos-detection.webp";
+import smartphoneRecommendationImg from "@/assets/smartphone-recommendation.webp";
+import amcaiAnalysisImg from "@/assets/amcai-analysis.webp";
+
 const Projects = () => {
   const projects = [
     {
@@ -12,6 +18,7 @@ const Projects = () => {
       duration: "May 2024 - Aug 2024",
       status: "Completed",
       icon: BarChart3,
+      image: handwrittenAssessmentImg,
       technologies: ["LangChain", "OCR", "NLP", "Python", "Computer Vision", "Machine Learning"],
       features: [
         "Extracted handwritten responses using Tesseract OCR",
@@ -27,6 +34,7 @@ const Projects = () => {
       duration: "Mar 2024 - Present",
       status: "In Progress",
       icon: Shield,
+      image: ddosDetectionImg,
       technologies: ["CatBoost", "Python", "Machine Learning", "Cybersecurity", "Network Security", "Data Analysis"],
       features: [
         "Trained CatBoost on CIC-DDoS2019 data; achieved 98.72% accuracy",
@@ -42,6 +50,7 @@ const Projects = () => {
       duration: "Apr 2024 - Jun 2024",
       status: "Completed",
       icon: Smartphone,
+      image: smartphoneRecommendationImg,
       technologies: ["Python", "Machine Learning", "Data Science", "Recommendation Systems", "Flask", "Data Visualization"],
       features: [
         "Implemented data collection via web scraping and YouTube API",
@@ -57,6 +66,7 @@ const Projects = () => {
       duration: "Jan 2024 - Feb 2024",
       status: "Completed",
       icon: BarChart3,
+      image: amcaiAnalysisImg,
       technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "SciPy", "Statistical Analysis"],
       features: [
         "Analyzed AMCAI data using Python (pandas, numpy, matplotlib, seaborn, scipy, datetime)",
@@ -95,62 +105,73 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="p-4 sm:p-6 lg:p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-              {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow flex-shrink-0 animate-pulse-glow">
-                  <project.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
-                    <h3 className="text-lg sm:text-xl font-semibold text-foreground leading-tight">
-                      {project.title}
-                    </h3>
-                    <Badge className={`${getStatusColor(project.status)} w-fit flex-shrink-0`}>
-                      {project.status}
-                    </Badge>
+            <Card key={index} className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up overflow-hidden" style={{animationDelay: `${index * 0.2}s`}}>
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow flex-shrink-0 animate-pulse-glow">
+                    <project.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <div className="flex items-center gap-2 mt-2 text-muted-foreground">
+                  <Badge className={`${getStatusColor(project.status)} text-white`}>
+                    {project.status}
+                  </Badge>
+                </div>
+              </div>
+              
+              {/* Project Content */}
+              <div className="p-4 sm:p-6 lg:p-8">
+                {/* Header */}
+                <div className="mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground leading-tight mb-2">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4 flex-shrink-0" />
                     <span className="text-sm">{project.duration}</span>
                   </div>
                 </div>
-              </div>
 
-              {/* Description */}
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {project.description}
-              </p>
+                {/* Description */}
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
 
-              {/* Features */}
-              <div className="space-y-2 mb-6">
-                {project.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{feature}</p>
-                  </div>
-                ))}
-              </div>
+                {/* Features */}
+                <div className="space-y-2 mb-6">
+                  {project.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature}</p>
+                    </div>
+                  ))}
+                </div>
 
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.technologies.map((tech, techIndex) => (
-                  <Badge key={techIndex} variant="secondary" className="text-xs">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, techIndex) => (
+                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Github className="h-4 w-4" />
-                  View Code
-                </Button>
-                <Button variant="default" size="sm" className="flex-1">
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </Button>
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button variant="outline" size="sm" className="flex-1">
+                    <Github className="h-4 w-4" />
+                    View Code
+                  </Button>
+                  <Button variant="default" size="sm" className="flex-1">
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </Button>
+                </div>
               </div>
             </Card>
           ))}

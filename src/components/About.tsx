@@ -2,6 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Target, User, Code2 } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
 
+// Import section images
+import personalInfoImg from "@/assets/personal-info.webp";
+import interestsImg from "@/assets/interests.webp";
+import goalsPhilosophyImg from "@/assets/goals-philosophy.webp";
+
 const About = () => {
   const personalInfo = [
     {
@@ -56,14 +61,29 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Personal Info</h3>
             </div>
 
-            <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 mb-8 hover:scale-105">
-              <div className="space-y-4">
-                {personalInfo.map((info, index) => (
-                  <div key={index} className="flex justify-between items-center">
-                    <span className="text-muted-foreground">{info.label}:</span>
-                    <span className="font-medium text-foreground">{info.value}</span>
-                  </div>
-                ))}
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 mb-8 hover:scale-105 overflow-hidden">
+              {/* Personal Info Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={personalInfoImg} 
+                  alt="Personal Information"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-lg font-semibold text-white">Profile Details</h4>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-4">
+                  {personalInfo.map((info, index) => (
+                    <div key={index} className="flex justify-between items-center">
+                      <span className="text-muted-foreground">{info.label}:</span>
+                      <span className="font-medium text-foreground">{info.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </Card>
 
@@ -75,13 +95,30 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Interests</h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {interests.map((interest, index) => (
-                <Card key={index} className="p-4 shadow-card hover:shadow-elegant transition-all duration-300 text-center hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
-                  <p className="text-sm font-medium text-foreground">{interest}</p>
-                </Card>
-              ))}
-            </div>
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 overflow-hidden">
+              {/* Interests Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={interestsImg} 
+                  alt="Technology Interests"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-lg font-semibold text-white">Tech Passions</h4>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {interests.map((interest, index) => (
+                    <div key={index} className="p-3 rounded-lg bg-secondary/30 text-center animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+                      <p className="text-sm font-medium text-foreground">{interest}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* Goals & Philosophy */}
@@ -93,35 +130,50 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Goals & Philosophy</h3>
             </div>
 
-            <div className="space-y-6">
-              <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <h4 className="text-lg font-semibold text-foreground mb-3">Career Vision</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  Aspiring to become a leading Data Scientist specializing in machine learning 
-                  and AI-driven solutions. Passionate about leveraging data to solve real-world 
-                  problems and drive innovation in technology.
-                </p>
-              </Card>
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up overflow-hidden" style={{animationDelay: '0.3s'}}>
+              {/* Goals & Philosophy Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={goalsPhilosophyImg} 
+                  alt="Career Goals and Philosophy"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-lg font-semibold text-white">Vision & Values</h4>
+                </div>
+              </div>
+              
+              <div className="p-6 space-y-6">
+                <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                  <h4 className="text-lg font-semibold text-foreground mb-3">Career Vision</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Aspiring to become a leading Data Scientist specializing in machine learning 
+                    and AI-driven solutions. Passionate about leveraging data to solve real-world 
+                    problems and drive innovation in technology.
+                  </p>
+                </div>
 
-              <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                <h4 className="text-lg font-semibold text-foreground mb-3">Current Focus</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  Currently expanding expertise in cloud technologies, DevOps practices, 
-                  and advanced analytics. Actively working on projects that combine 
-                  machine learning with practical business applications.
-                </p>
-              </Card>
+                <div className="animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+                  <h4 className="text-lg font-semibold text-foreground mb-3">Current Focus</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Currently expanding expertise in cloud technologies, DevOps practices, 
+                    and advanced analytics. Actively working on projects that combine 
+                    machine learning with practical business applications.
+                  </p>
+                </div>
 
-              <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-                <h4 className="text-lg font-semibold text-foreground mb-3">Why "Admirer"?</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  I chose the nickname "Admirer" because I deeply admire the power of 
-                  technology and data to transform lives. I'm always in awe of innovative 
-                  solutions and strive to contribute to the tech community with the same 
-                  passion and respect I have for the field.
-                </p>
-              </Card>
-            </div>
+                <div className="animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+                  <h4 className="text-lg font-semibold text-foreground mb-3">Why "Admirer"?</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    I chose the nickname "Admirer" because I deeply admire the power of 
+                    technology and data to transform lives. I'm always in awe of innovative 
+                    solutions and strive to contribute to the tech community with the same 
+                    passion and respect I have for the field.
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </div>

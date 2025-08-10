@@ -3,6 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
 
+// Import experience images
+import cognizantDevopsImg from "@/assets/cognizant-devops.webp";
+import innomaticsDataScienceImg from "@/assets/innomatics-data-science.webp";
+import aeronauticalSummerImg from "@/assets/aeronautical-summer.webp";
+
 const Experience = () => {
   const experiences = [
     {
@@ -12,6 +17,7 @@ const Experience = () => {
       duration: "Mar 2025 - June 2025",
       location: "Remote",
       status: "Upcoming",
+      image: cognizantDevopsImg,
       description: [
         "Completed internship in DevOps tools and AWS",
         "Worked on AWS services, Linux, & DevOps tools"
@@ -25,6 +31,7 @@ const Experience = () => {
       duration: "Jan 2024 - Apr 2024",
       location: "Remote",
       status: "Completed",
+      image: innomaticsDataScienceImg,
       description: [
         "Completed internship in machine learning and data science",
         "Worked on predictive modeling, Gen AI, NLP projects, and Data Analytics"
@@ -38,6 +45,7 @@ const Experience = () => {
       duration: "May 2024 - Sep 2024",
       location: "Hyderabad",
       status: "Completed",
+      image: aeronauticalSummerImg,
       description: [
         "Completed internship in deep learning, OCR, and GenAI",
         "Worked on assessing handwritten subjective answers using LangChain"
@@ -73,39 +81,44 @@ const Experience = () => {
 
         <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="p-4 sm:p-6 lg:p-8 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-              <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-6">
-                {/* Left side - Icon and timeline */}
-                <div className="flex lg:flex-col items-center lg:items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow animate-bounce-in">
-                    <Briefcase className="h-8 w-8 text-primary-foreground" />
+            <Card key={index} className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 bg-card/80 backdrop-blur-sm hover:scale-105 animate-fade-in-up overflow-hidden" style={{animationDelay: `${index * 0.2}s`}}>
+              <div className="flex flex-col lg:flex-row">
+                {/* Left side - Experience Image */}
+                <div className="lg:w-80 h-64 lg:h-auto relative overflow-hidden">
+                  <img 
+                    src={exp.image} 
+                    alt={exp.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 lg:top-4 lg:bottom-auto flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow animate-bounce-in">
+                      <Briefcase className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <Badge className={`${getStatusColor(exp.status)} text-white`}>
+                      {exp.status}
+                    </Badge>
                   </div>
-                  <div className="hidden lg:block w-0.5 h-24 bg-gradient-to-b from-primary to-accent opacity-30 animate-pulse"></div>
                 </div>
 
                 {/* Right side - Content */}
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-4">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-1">{exp.title}</h3>
-                      <p className="text-base sm:text-lg font-medium text-primary mb-2">{exp.company}</p>
-                      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-4 text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4 flex-shrink-0" />
-                          <span className="text-sm">{exp.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4 flex-shrink-0" />
-                          <span className="text-sm">{exp.location}</span>
-                        </div>
-                        <Badge variant="outline" className="text-xs w-fit">
-                          {exp.type}
-                        </Badge>
+                <div className="flex-1 p-4 sm:p-6 lg:p-8">
+                  <div className="mb-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-1">{exp.title}</h3>
+                    <p className="text-base sm:text-lg font-medium text-primary mb-2">{exp.company}</p>
+                    <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-4 text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4 flex-shrink-0" />
+                        <span className="text-sm">{exp.duration}</span>
                       </div>
+                      <div className="flex items-center gap-1">
+                        <MapPin className="h-4 w-4 flex-shrink-0" />
+                        <span className="text-sm">{exp.location}</span>
+                      </div>
+                      <Badge variant="outline" className="text-xs w-fit">
+                        {exp.type}
+                      </Badge>
                     </div>
-                    <Badge className={getStatusColor(exp.status)}>
-                      {exp.status}
-                    </Badge>
                   </div>
 
                   <div className="space-y-3 mb-6">
