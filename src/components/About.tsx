@@ -6,6 +6,7 @@ import FloatingLogos from "./FloatingLogos";
 import personalInfoImg from "@/assets/personal-info.webp";
 import interestsImg from "@/assets/interests.webp";
 import goalsPhilosophyImg from "@/assets/goals-philosophy.webp";
+import profileGhibliImg from "@/assets/profile-ghibli.webp";
 
 const About = () => {
   const personalInfo = [
@@ -62,16 +63,23 @@ const About = () => {
             </div>
 
             <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 mb-8 hover:scale-105 overflow-hidden">
-              {/* Personal Info Image */}
+              {/* Personal Info with Ghibli Profile */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={personalInfoImg} 
-                  alt="Personal Information"
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="relative">
+                    <img 
+                      src={profileGhibliImg} 
+                      alt="Nehanth Gaddam - Ghibli Style Portrait"
+                      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-elegant animate-float"
+                    />
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center animate-pulse-glow">
+                      <User className="h-4 w-4 text-white" />
+                    </div>
+                  </div>
+                </div>
                 <div className="absolute bottom-4 left-4">
-                  <h4 className="text-lg font-semibold text-white">Profile Details</h4>
+                  <h4 className="text-lg font-semibold text-white">Nehanth "Admirer" Gaddam</h4>
                 </div>
               </div>
               

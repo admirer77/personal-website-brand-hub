@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, Github, Linkedin, Download, ExternalLink } from "l
 import FloatingLogos from "./FloatingLogos";
 import HeroParticles from "./HeroParticles";
 import heroBackgroundImg from "@/assets/hero-background.webp";
+import profileGhibliImg from "@/assets/profile-ghibli.webp";
 
 const Hero = () => {
   return (
@@ -87,9 +88,9 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
                   <img 
-                    src="/lovable-uploads/1474a3d5-8775-478c-a475-7b8ead48311f.png" 
-                    alt="Nehanth Gaddam Profile"
-                    className="w-full h-full rounded-full object-cover animate-pulse-glow"
+                    src={profileGhibliImg} 
+                    alt="Nehanth Gaddam - Ghibli Style Portrait"
+                    className="w-full h-full rounded-full object-cover animate-float"
                   />
                 </div>
                 
