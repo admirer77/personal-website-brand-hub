@@ -195,6 +195,42 @@ export default {
 					'30%, 50%, 70%, 90%': { transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)' },
 					'40%, 60%, 80%': { transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)' },
 					'100%': { transform: 'scale3d(1, 1, 1)' }
+				},
+				'bulb-light-up': {
+					'0%': { 
+						filter: 'brightness(0.8) contrast(0.9)',
+						opacity: '0.8'
+					},
+					'20%': { 
+						filter: 'brightness(0.9) contrast(1)',
+						opacity: '0.85'
+					},
+					'40%': { 
+						filter: 'brightness(1.1) contrast(1.1)',
+						opacity: '0.9'
+					},
+					'60%': { 
+						filter: 'brightness(1.3) contrast(1.2)',
+						opacity: '0.95'
+					},
+					'80%': { 
+						filter: 'brightness(1.5) contrast(1.3)',
+						opacity: '1'
+					},
+					'100%': { 
+						filter: 'brightness(1.6) contrast(1.4) saturate(1.2)',
+						opacity: '1'
+					}
+				},
+				'glow-pulse': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)',
+						filter: 'brightness(1.6) contrast(1.4) saturate(1.2)'
+					},
+					'50%': { 
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.5)',
+						filter: 'brightness(1.8) contrast(1.5) saturate(1.3)'
+					}
 				}
 			},
 			animation: {
@@ -232,7 +268,9 @@ export default {
 				'delay-200': 'fade-in-up 0.8s ease-out 0.2s both',
 				'delay-300': 'fade-in-up 0.8s ease-out 0.3s both',
 				'delay-500': 'fade-in-up 0.8s ease-out 0.5s both',
-				'delay-700': 'fade-in-up 0.8s ease-out 0.7s both'
+				'delay-700': 'fade-in-up 0.8s ease-out 0.7s both',
+				'bulb-light-up': 'bulb-light-up 3s ease-in-out 1s both',
+				'glow-pulse': 'glow-pulse 2s ease-in-out 4s infinite'
 			}
 		}
 	},

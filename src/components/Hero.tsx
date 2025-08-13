@@ -9,14 +9,16 @@ import profileGhibliImg from "@/assets/profile-ghibli.webp";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Hero Background Image */}
+      {/* Hero Background Image with Lighting Animation */}
       <div className="absolute inset-0">
         <img 
           src={heroBackgroundImg} 
-          alt="Hero Background"
-          className="w-full h-full object-cover opacity-30"
+          alt="DevOps, AI, Data Science Technology Background"
+          className="w-full h-full object-cover opacity-30 animate-bulb-light-up animate-glow-pulse"
         />
         <div className="absolute inset-0 bg-gradient-hero/80"></div>
+        {/* Additional glow overlay for lighting effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/10 via-transparent to-accent-glow/10 animate-glow-pulse"></div>
       </div>
       
       <HeroParticles />
