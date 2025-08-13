@@ -86,9 +86,11 @@ const Hero = () => {
             <Card className="p-4 sm:p-6 lg:p-8 max-w-xs sm:max-w-sm lg:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold text-primary animate-pulse-glow">
-                    A
-                  </div>
+                  <img 
+                    src="/lovable-uploads/1474a3d5-8775-478c-a475-7b8ead48311f.png" 
+                    alt="Nehanth Gaddam Profile"
+                    className="w-full h-full rounded-full object-cover animate-pulse-glow"
+                  />
                 </div>
                 
                 <h3 className="text-lg sm:text-xl font-semibold text-card-foreground mb-4">
