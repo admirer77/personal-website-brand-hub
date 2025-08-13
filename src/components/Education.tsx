@@ -3,6 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award, Target } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
 
+// Import education images
+import btechEducationImg from "@/assets/btech-education.webp";
+import intermediateEducationImg from "@/assets/intermediate-education.webp";
+import highschoolEducationImg from "@/assets/highschool-education.webp";
+
 const Education = () => {
   const education = [
     {
@@ -10,21 +15,24 @@ const Education = () => {
       field: "Computer Science and Engineering (Data Science)",
       institution: "Institute of Aeronautical Engineering, Hyderabad",
       year: "2022-2025",
-      cgpa: "9.26 CGPA"
+      cgpa: "9.26 CGPA",
+      image: btechEducationImg
     },
     {
       degree: "Intermediate",
       field: "MPC",
       institution: "St. J. College, Karimnagar",
       year: "2019-2021",
-      cgpa: "95%"
+      cgpa: "95%",
+      image: intermediateEducationImg
     },
     {
       degree: "High School",
       field: "Secondary Education",
       institution: "St. John's High School, Karimnagar",
       year: "2019",
-      cgpa: "9.7 CGPA"
+      cgpa: "9.7 CGPA",
+      image: highschoolEducationImg
     }
   ];
 
@@ -60,18 +68,33 @@ const Education = () => {
 
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
-                      <p className="text-sm text-muted-foreground">{edu.field}</p>
+                <Card key={index} className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 overflow-hidden hover:scale-105">
+                  <div className="flex flex-col sm:flex-row">
+                    {/* Education Image */}
+                    <div className="sm:w-32 h-24 sm:h-auto relative overflow-hidden">
+                      <img 
+                        src={edu.image} 
+                        alt={edu.degree}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <Badge variant="secondary" className="bg-primary/10 text-primary">
-                      {edu.cgpa}
-                    </Badge>
+                    
+                    {/* Content */}
+                    <div className="flex-1 p-4 sm:p-6">
+                      <div className="flex justify-between items-start mb-3">
+                        <div>
+                          <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
+                          <p className="text-sm text-muted-foreground">{edu.field}</p>
+                        </div>
+                        <Badge variant="secondary" className="bg-primary/10 text-primary">
+                          {edu.cgpa}
+                        </Badge>
+                      </div>
+                      <p className="text-sm text-muted-foreground mb-2">{edu.institution}</p>
+                      <p className="text-xs text-muted-foreground">{edu.year}</p>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{edu.institution}</p>
-                  <p className="text-xs text-muted-foreground">{edu.year}</p>
                 </Card>
               ))}
             </div>

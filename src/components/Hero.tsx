@@ -3,10 +3,21 @@ import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Github, Linkedin, Download, ExternalLink } from "lucide-react";
 import FloatingLogos from "./FloatingLogos";
 import HeroParticles from "./HeroParticles";
+import heroBackgroundImg from "@/assets/hero-background.webp";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
+      {/* Hero Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBackgroundImg} 
+          alt="Hero Background"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-hero/80"></div>
+      </div>
+      
       <HeroParticles />
       <FloatingLogos section="hero" />
       {/* Background decorative elements */}
