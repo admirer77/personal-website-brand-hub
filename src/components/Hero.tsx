@@ -9,35 +9,24 @@ import profileGhibliImg from "@/assets/profile-ghibli.webp";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Live Animated Wallpaper Background */}
+      {/* Subtle Dynamic Background */}
       <div className="absolute inset-0">
-        {/* Dynamic moving gradient backgrounds */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-blue-500/20 animate-gradient-x"></div>
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-500/15 via-green-500/15 to-yellow-500/15 animate-gradient-y"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-red-500/10 to-orange-500/10 animate-pulse"></div>
+        {/* Soft animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-accent/3 via-transparent to-primary/3 animate-gradient-y"></div>
         
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full animate-float blur-xl"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-accent/40 to-primary-glow/40 rounded-lg rotate-45 animate-spin-slow blur-lg"></div>
-        <div className="absolute bottom-32 left-32 w-20 h-20 bg-gradient-to-br from-primary-glow/35 to-accent-glow/35 rounded-full animate-bounce blur-md"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-to-br from-accent-glow/30 to-primary/30 rounded-lg rotate-12 animate-pulse blur-lg"></div>
+        {/* Subtle floating elements */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-primary/5 rounded-full animate-float blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-accent/5 rounded-full animate-float blur-2xl" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary-glow/3 rounded-full animate-pulse blur-xl"></div>
         
-        {/* Animated particles */}
-        <div className="absolute top-10 left-1/4 w-3 h-3 bg-primary rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse delay-300"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-primary-glow rounded-full animate-bounce delay-500"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-accent-glow rounded-full animate-ping delay-700"></div>
-        <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-primary rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/4 right-1/6 w-3 h-3 bg-accent rounded-full animate-bounce delay-1200"></div>
+        {/* Soft particles */}
+        <div className="absolute top-10 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-ping"></div>
+        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-accent/40 rounded-full animate-pulse delay-300"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-primary-glow/40 rounded-full animate-bounce delay-500"></div>
         
-        {/* Flowing lines */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-slide-in-right"></div>
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent animate-slide-in-left delay-500"></div>
-        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-glow/50 to-transparent animate-slide-in-right delay-1000"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-glow/40 to-transparent animate-slide-in-left delay-1500"></div>
-        
-        {/* Overlay to blend everything */}
-        <div className="absolute inset-0 bg-gradient-hero/85"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-hero/90"></div>
       </div>
       
       <HeroParticles />

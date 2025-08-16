@@ -52,9 +52,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
-          {/* Personal Information */}
-          <div className="animate-slide-in-left">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:items-start">
+          {/* Left Column - Personal Information & Interests */}
+          <div className="animate-slide-in-left flex flex-col h-full">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center animate-bounce-in">
                 <User className="h-6 w-6 text-primary" />
@@ -62,7 +62,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Personal Info</h3>
             </div>
 
-            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 mb-8 hover:scale-105 overflow-hidden">
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 mb-8 hover:scale-105 overflow-hidden flex-grow">
               {/* Personal Info with Ghibli Profile */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex-grow">
                 <div className="space-y-4">
                   {personalInfo.map((info, index) => (
                     <div key={index} className="flex justify-between items-center">
@@ -103,7 +103,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Interests</h3>
             </div>
 
-            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 overflow-hidden">
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 overflow-hidden flex-grow">
               {/* Interests Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -117,7 +117,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex-grow">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {interests.map((interest, index) => (
                     <div key={index} className="p-3 rounded-lg bg-secondary/30 text-center animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
@@ -129,8 +129,8 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Goals & Philosophy */}
-          <div className="animate-slide-in-right">
+          {/* Right Column - Goals & Philosophy */}
+          <div className="animate-slide-in-right flex flex-col h-full">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center animate-bounce-in" style={{animationDelay: '0.2s'}}>
                 <Target className="h-6 w-6 text-accent" />
@@ -138,7 +138,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">Goals & Philosophy</h3>
             </div>
 
-            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up overflow-hidden" style={{animationDelay: '0.3s'}}>
+            <Card className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in-up overflow-hidden flex-grow" style={{animationDelay: '0.3s'}}>
               {/* Goals & Philosophy Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -152,7 +152,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="p-6 space-y-6">
+              <div className="p-6 space-y-6 flex-grow">
                 <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                   <h4 className="text-lg font-semibold text-foreground mb-3">Career Vision</h4>
                   <p className="text-muted-foreground leading-relaxed">
