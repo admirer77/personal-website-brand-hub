@@ -59,15 +59,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:items-start">
           {/* Contact Information */}
-          <div>
-            <Card className="p-6 sm:p-8 shadow-elegant bg-gradient-card">
+          <div className="flex flex-col h-full">
+            <Card className="p-6 sm:p-8 shadow-elegant bg-gradient-card flex-grow">
               <h3 className="text-2xl font-semibold text-foreground mb-8">
                 Contact Information
               </h3>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-8 flex-grow">
                 {contactInfo.map((contact, index) => (
                   <a
                     key={index}
@@ -113,13 +113,13 @@ const Contact = () => {
           </div>
 
           {/* Quick Connect */}
-          <div>
-            <Card className="p-6 sm:p-8 shadow-elegant bg-gradient-card">
+          <div className="flex flex-col h-full">
+            <Card className="p-6 sm:p-8 shadow-elegant bg-gradient-card flex-grow">
               <h3 className="text-2xl font-semibold text-foreground mb-8">
                 Let's Connect
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-6 flex-grow">
                 <Card className="p-6 shadow-card bg-card/50">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">

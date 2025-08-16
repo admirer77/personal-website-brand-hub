@@ -56,9 +56,9 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:items-start">
           {/* Education Section */}
-          <div>
+          <div className="flex flex-col h-full">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <GraduationCap className="h-6 w-6 text-primary" />
@@ -66,7 +66,7 @@ const Education = () => {
               <h3 className="text-2xl font-semibold text-foreground">Education</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 flex-grow">
               {education.map((edu, index) => (
                 <Card key={index} className="p-0 shadow-card hover:shadow-elegant transition-all duration-300 overflow-hidden hover:scale-105">
                   <div className="flex flex-col sm:flex-row">
@@ -101,7 +101,7 @@ const Education = () => {
           </div>
 
           {/* Achievements & Goals */}
-          <div>
+          <div className="flex flex-col h-full">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                 <Award className="h-6 w-6 text-accent" />
@@ -109,7 +109,7 @@ const Education = () => {
               <h3 className="text-2xl font-semibold text-foreground">Achievements</h3>
             </div>
 
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-12 flex-grow">
               {achievements.map((achievement, index) => (
                 <Card key={index} className="p-4 shadow-card hover:shadow-elegant transition-all duration-300">
                   <div className="flex items-start gap-3">
@@ -128,7 +128,7 @@ const Education = () => {
               <h3 className="text-2xl font-semibold text-foreground">Career Goals</h3>
             </div>
 
-            <Card className="p-6 shadow-card">
+            <Card className="p-6 shadow-card flex-grow">
               <p className="text-muted-foreground leading-relaxed">
                 Aspiring to become a leading Data Scientist specializing in machine learning 
                 and AI-driven solutions. Passionate about leveraging data to solve real-world 

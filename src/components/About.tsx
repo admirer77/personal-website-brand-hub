@@ -24,7 +24,7 @@ const About = () => {
     },
     {
       label: "Field",
-      value: "Data Science & ML Engineering"
+      value: "DevOps AWS, DS, ML"
     }
   ];
 

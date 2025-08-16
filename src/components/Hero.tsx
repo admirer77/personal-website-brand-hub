@@ -60,7 +60,7 @@ const Hero = () => {
             </h2>
             
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-2 animate-stagger-4">
-              Data Analyst | Aeronautical Engineering Enthusiast
+              Data Analyst | Entrepreneurship Enthusiast
             </p>
             
             <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-6 sm:mb-8 animate-stagger-5">
