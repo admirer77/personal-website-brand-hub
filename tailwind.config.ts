@@ -231,6 +231,14 @@ export default {
 						boxShadow: '0 0 40px hsl(var(--primary) / 0.5)',
 						filter: 'brightness(1.8) contrast(1.5) saturate(1.3)'
 					}
+				},
+				'gradient-y': {
+					'0%, 100%': { backgroundPosition: '50% 0%' },
+					'50%': { backgroundPosition: '50% 100%' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -270,7 +278,9 @@ export default {
 				'delay-500': 'fade-in-up 0.8s ease-out 0.5s both',
 				'delay-700': 'fade-in-up 0.8s ease-out 0.7s both',
 				'bulb-light-up': 'bulb-light-up 3s ease-in-out 1s both',
-				'glow-pulse': 'glow-pulse 2s ease-in-out 4s infinite'
+				'glow-pulse': 'glow-pulse 2s ease-in-out 4s infinite',
+				'gradient-y': 'gradient-y 4s ease infinite',
+				'spin-slow': 'spin-slow 20s linear infinite'
 			}
 		}
 	},

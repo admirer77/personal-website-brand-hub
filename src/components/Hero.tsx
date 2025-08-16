@@ -9,29 +9,35 @@ import profileGhibliImg from "@/assets/profile-ghibli.webp";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Dynamic Live Tech Background */}
+      {/* Live Animated Wallpaper Background */}
       <div className="absolute inset-0">
-        <img 
-          src={heroBackgroundImg} 
-          alt="DevOps, AI, Data Science Technology Background"
-          className="w-full h-full object-cover opacity-20"
-        />
-        {/* Animated gradient overlays for live effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/30 animate-gradient-x opacity-60"></div>
-        <div className="absolute inset-0 bg-gradient-to-tl from-accent-glow/20 via-transparent to-primary-glow/20 animate-pulse-glow"></div>
+        {/* Dynamic moving gradient backgrounds */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-blue-500/20 animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-pink-500/15 via-green-500/15 to-yellow-500/15 animate-gradient-y"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-red-500/10 to-orange-500/10 animate-pulse"></div>
         
-        {/* Live animated tech elements */}
-        <div className="absolute top-10 left-1/4 w-4 h-4 bg-primary rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-accent rounded-full animate-pulse delay-300"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-primary-glow rounded-full animate-bounce delay-500"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-accent-glow rounded-full animate-ping delay-700"></div>
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full animate-float blur-xl"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-accent/40 to-primary-glow/40 rounded-lg rotate-45 animate-spin-slow blur-lg"></div>
+        <div className="absolute bottom-32 left-32 w-20 h-20 bg-gradient-to-br from-primary-glow/35 to-accent-glow/35 rounded-full animate-bounce blur-md"></div>
+        <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-to-br from-accent-glow/30 to-primary/30 rounded-lg rotate-12 animate-pulse blur-lg"></div>
+        
+        {/* Animated particles */}
+        <div className="absolute top-10 left-1/4 w-3 h-3 bg-primary rounded-full animate-ping"></div>
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent rounded-full animate-pulse delay-300"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-primary-glow rounded-full animate-bounce delay-500"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-accent-glow rounded-full animate-ping delay-700"></div>
         <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-primary rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 right-1/6 w-3 h-3 bg-accent rounded-full animate-bounce delay-1200"></div>
         
-        {/* Circuit-like animated lines */}
-        <div className="absolute top-20 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-slide-in-right"></div>
-        <div className="absolute bottom-32 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent animate-slide-in-left delay-500"></div>
+        {/* Flowing lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-slide-in-right"></div>
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent animate-slide-in-left delay-500"></div>
+        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-glow/50 to-transparent animate-slide-in-right delay-1000"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-glow/40 to-transparent animate-slide-in-left delay-1500"></div>
         
-        <div className="absolute inset-0 bg-gradient-hero/70"></div>
+        {/* Overlay to blend everything */}
+        <div className="absolute inset-0 bg-gradient-hero/85"></div>
       </div>
       
       <HeroParticles />
@@ -47,9 +53,9 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 z-10 pt-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left animate-slide-in-left order-1">
+          <div className="text-center lg:text-left animate-slide-in-left order-1 lg:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               <span className="animate-bounce-in block">Nehanth</span>
               <span className="block text-foreground animate-stagger-1">
@@ -98,7 +104,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile card */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right order-2 mt-8 lg:mt-0 mb-8 lg:mb-0">
+          <div className="flex justify-center lg:justify-end animate-slide-in-right order-2 lg:order-2">
             <Card className="p-4 sm:p-6 lg:p-8 max-w-xs sm:max-w-sm lg:max-w-md w-full bg-card/90 backdrop-blur-md border shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105">
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-28 h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-rotate-slow">
@@ -135,7 +141,7 @@ const Hero = () => {
                 <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
                   <div className="flex items-center justify-between">
                     <span>Current CGPA:</span>
-                    <span className="font-semibold text-primary">9.26</span>
+                    <span className="font-semibold text-primary">8.23</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Projects:</span>

@@ -15,7 +15,7 @@ const Education = () => {
       field: "Computer Science and Engineering (Data Science)",
       institution: "Institute of Aeronautical Engineering, Hyderabad",
       year: "2022-2025",
-      cgpa: "9.26 CGPA",
+      cgpa: "8.23 CGPA",
       image: btechEducationImg
     },
     {
